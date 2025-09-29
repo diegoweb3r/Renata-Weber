@@ -13,18 +13,18 @@
   box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 li {
   text-decoration: none;
   list-style: none;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.8s ease;
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.8s ease;
 }
 
 body {
@@ -58,14 +58,14 @@ nav {
   display: flex;
   justify-content: flex-end;
   position: sticky;
-  padding-top: 15px;
+  padding: 15px 15px 0 0;
   top: 0;
   z-index: 1000;
 }
 
-a:hover{
-    color: var(--cor-destaque);
-    
+
+a:hover {
+  color: var(--cor-destaque);
 }
 
 nav ul {
@@ -106,10 +106,10 @@ nav ul {
 }
 
 .mouseIcon {
-   position: absolute; 
-  bottom: 20px;      
-  left: 50%;        
-  transform: translateX(-50%); 
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   animation: bounce 3s infinite;
 }
 
@@ -128,7 +128,8 @@ nav ul {
 
 .sobre h2,
 .experiences h2,
-.gallery h2, .contact h2 {
+.gallery h2,
+.contact h2 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
 }
@@ -188,33 +189,31 @@ nav ul {
   filter: grayscale(0%);
 }
 
-.contact{
-    height: 250px;
-    background-color: var(--cor-texto);
-    color: var(--cor-fundo);
-    margin-top: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.contact {
+  height: 250px;
+  background-color: var(--cor-texto);
+  color: var(--cor-fundo);
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.contact p{
-    font-family: "Inter", serif;
+.contact p {
+  font-family: "Inter", serif;
 }
 
-.contactInfo{
-    display: flex;
-    gap: 10px;
-    
+.contactInfo {
+  display: flex;
+  gap: 10px;
 }
 
-
-footer{
-    font-family: "Inter", sans-serif;
-    display: flex;
-    justify-content: center;
+footer {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
 }
 @keyframes bounce {
   0%,
