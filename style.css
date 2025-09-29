@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root {
+  --cor-fundo: #1e1e1e;
+  --cor-texto: #f0f0f0;
+  --cor-destaque: rgb(143, 36, 36);
+  --cor-secundaria: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.8s ease;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-fundo);
+  justify-content: center;
+  color: var(--cor-texto);
+}
+
+main {
+  background: linear-gradient(
+      to bottom,
+      rgba(30, 30, 30, 0) 70%,
+      var(--cor-fundo) 100%
+    ),
+    url(assets/fundo.jpg) no-repeat 75% center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--cor-texto);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  padding-top: 15px;
+  top: 0;
+  z-index: 1000;
+}
+
+a:hover{
+    color: var(--cor-destaque);
+    
+}
+
+nav ul {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", serif;
+  font-weight: 100;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--cor-texto);
+  font-size: 8rem;
+}
+
+.text p {
+  width: 40%;
+  font-family: "Inter", sans-serif;
+  color: var(--cor-texto);
+  font-weight: 200;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.separador {
+  font-size: 2rem;
+  color: var(--cor-destaque);
+  align-content: center;
+}
+
+.mouseIcon {
+   position: absolute; 
+  bottom: 20px;      
+  left: 50%;        
+  transform: translateX(-50%); 
+  animation: bounce 3s infinite;
+}
+
+.sobre,
+.experiences,
+.gallery {
+  margin-top: 250px;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre h2,
+.experiences h2,
+.gallery h2, .contact h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+}
+
+.sobre p {
+  width: 35%;
+  margin-top: 2rem;
+}
+
+.cardContainer {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 500px;
+  margin-top: 2rem;
+}
+
+.cards h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--cor-destaque);
+  font-size: 1.5rem;
+}
+
+.cardInfo {
+  border-left: 1px solid var(--cor-destaque);
+  margin: 1rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.cardInfo p {
+  margin: 0.3rem;
+}
+
+.cardInfo .year,
+.cardInfo .local {
+  color: var(--cor-secundaria);
+  font-size: 0.9rem;
+}
+.cardInfo .name {
+  font-family: "Playfair Display", serif;
+  color: var(--cor-destaque);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.gallery img {
+  margin-top: 2rem;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.8s ease;
+}
+
+.gallery img:hover {
+  filter: grayscale(0%);
+}
+
+.contact{
+    height: 250px;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact p{
+    font-family: "Inter", serif;
+}
+
+.contactInfo{
+    display: flex;
+    gap: 10px;
+    
+}
+
+
+footer{
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
