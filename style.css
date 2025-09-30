@@ -57,6 +57,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   font-weight: 100;
+  transition: all 0.4s ease-in-out;
 }
 
 .toggleMenu{
@@ -256,7 +257,6 @@ footer {
 
   
   nav ul{
-    display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -266,10 +266,16 @@ footer {
     text-align: right;
     min-width: 90%;
     background-color: var(--cor-fundo);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+
   }
 
   nav ul.active{
     display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 
   .toggleMenu{
