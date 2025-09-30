@@ -84,6 +84,11 @@ main {
   padding: 40px 20px;
 }
 
+.text h1,
+.text p {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+}
+
 .text {
   display: flex;
   flex-direction: column;
@@ -95,6 +100,7 @@ main {
   font-family: "Playfair Display", serif;
   color: var(--cor-texto);
   font-size: clamp(3rem, 10vw, 8rem);
+
 }
 
 .text p {
