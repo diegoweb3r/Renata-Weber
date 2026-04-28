@@ -1,5 +1,5 @@
 ---
-title: Meu Primeiro Texto
+title: Meu Primeiro Texto 2
 date: 2026-04-28T14:43:17.105Z
 excerpt: Um breve resumo do que você vai encontrar neste texto. Pode ser uma
   frase ou duas que despertem a curiosidade do leitor.
