@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: diegoweb3r/Renata-Weber
+  branch: main
+
+media_folder: "assets/blog"
+public_folder: "/assets/blog"
+
+locale: "pt"
+
+collections:
+  - name: "posts"
+    label: "Posts do Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de Publicação", name: "date", widget: "datetime" }
+      - { label: "Resumo", name: "excerpt", widget: "text", required: false, hint: "Pequena descrição que aparece na listagem do blog" }
+      - { label: "Imagem de Capa", name: "thumbnail", widget: "image", required: false }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
