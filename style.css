@@ -110,7 +110,8 @@ main {
 }
 
 .text p {
- min-width: 40%;
+  min-width: 40%;
+  max-width: 40%;
   color: var(--cor-texto);
   font-weight: 200;
   display: flex;

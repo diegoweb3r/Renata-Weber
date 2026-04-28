@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+    /* ── Grid de posts ── */
+    .blog-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 5vw;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 3rem 2.5rem;
+    }
+
+    .post-card {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+      cursor: pointer;
+    }
+
+    .post-card .cover {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--border);
+      display: block;
+    }
+
+    .post-card .cover-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #ede8e0, #d9d0c4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .post-card .meta {
+      font-size: .78rem;
+      color: var(--accent);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .post-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    .post-card p.excerpt {
+      font-size: .9rem;
+      color: #555;
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .post-card .read-more {
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      align-self: flex-start;
+      transition: color .2s, border-color .2s;
+    }
+    .post-card .read-more:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ── Post único (modal) ── */
+    .post-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20,18,15,.5);
+      z-index: 100;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+    }
+    .post-overlay.open { display: block; }
+
+    .post-modal {
+      background: var(--cream);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 4rem;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      .post-modal { padding: 2rem 1.5rem; }
+    }
+
+    .post-modal .close-btn {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: var(--muted);
+      line-height: 1;
+    }
+
+    .post-modal .post-meta {
+      font-size: .78rem;
+      color: var(--accent);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .post-modal h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: 2rem;
+    }
+
+    .post-modal img.cover {
+      width: 100%;
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+
+    .post-modal .post-body {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #333;
+    }
+
+    .post-modal .post-body h2,
+    .post-modal .post-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      margin: 2rem 0 .8rem;
+    }
+
+    .post-modal .post-body p { margin-bottom: 1.2rem; }
+    .post-modal .post-body img { max-width: 100%; margin: 1.5rem 0; }
+
+    /* ── Empty state ── */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 5rem 0;
+      color: var(--muted);
+    }
+    .empty-state h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: .5rem;
+    }
+
+    /* ── Footer ── */
+    .blog-footer {
+      text-align: center;
+      padding: 2.5rem 5vw;
+      
+      font-size: .8rem;
+      color: var(--muted);
+      letter-spacing: .08em;
+    }
