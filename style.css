@@ -34,7 +34,8 @@ body {
   background-color: var(--cor-fundo);
   justify-content: center;
   color: var(--cor-texto);
-   font-family: "Inter", serif;
+  font-family: "Inter", serif;
+  padding: 1.5rem;
 }
 
 /* Navbar */
@@ -46,6 +47,10 @@ nav {
   padding: 15px 15px 0 0;
   top: 0;
   z-index: 1000;
+  background: rgba(0, 0, 0, 0.3); /* Um preto bem transparente */
+  backdrop-filter: blur(8px);    /* O efeito de vidro */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 a:hover {
@@ -87,7 +92,7 @@ main {
 
 .text h1,
 .text p {
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+  text-shadow: 0px 4px 15px rgba(0,0,0,0.5);
 }
 
 .text {
