@@ -90,6 +90,24 @@ main {
   padding: 40px 20px;
 }
 
+main::after{
+  content: '';
+  position: absolute;
+   background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  filter: blur(20px);
+  height: 140%;
+  width: 400px;
+  top: -25%;
+  right: 430px;
+  transform: rotate(15deg);
+  border-radius: 100px;
+}
+
 .text h1,
 .text p {
   text-shadow: 0px 4px 15px rgba(0,0,0,0.5);
