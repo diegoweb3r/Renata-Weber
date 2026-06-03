@@ -261,6 +261,33 @@ main::after{
   align-items: center;
 }
 
+.contactIcon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--cor-destaque);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: .3s;
+}
+
+.contactIcon:hover {
+  background-color: var(--cor-destaque);
+  transform: translateY(-3px);
+}
+
+.contactIcon img {
+  width: 28px;
+  transition: .3s;
+}
+
+.contactIcon:hover img {
+  filter: brightness(0) invert(1);
+}
+
 /* Footer */
 footer {
   display: flex;
