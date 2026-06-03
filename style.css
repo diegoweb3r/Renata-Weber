@@ -90,6 +90,7 @@ main {
   padding: 40px 20px;
 }
 
+
 main::after{
   content: '';
   position: absolute;
@@ -99,7 +100,8 @@ main::after{
     rgba(255, 255, 255, 0.4),
     transparent
   );
-  filter: blur(20px);
+
+  filter: blur(100px);
   height: 140%;
   width: 400px;
   top: -25%;
@@ -107,6 +109,8 @@ main::after{
   transform: rotate(15deg);
   border-radius: 100px;
 }
+
+
 
 .text h1,
 .text p {
