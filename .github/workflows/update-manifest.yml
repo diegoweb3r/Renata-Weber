@@ -1,0 +1,29 @@
+name: Update posts manifest
+
+on:
+  push:
+    paths:
+      - '_posts/**.md'
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate manifest.json
+        run: |
+          cd _posts
+          ls *.md | sort -r | python3 -c "
+          import sys, json
+          files = [l.strip() for l in sys.stdin]
+          print(json.dumps(files, indent=2))
+          " > manifest.json
+
+      - name: Commit manifest
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add _posts/manifest.json
+          git diff --cached --quiet || git commit -m "chore: atualiza manifest.json"
+          git push
