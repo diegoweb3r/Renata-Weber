@@ -1,6 +1,9 @@
 ---
 title: "Os Bastidores de um Novo Espetáculo: Quando a Arte Ganha Vida"
 date: 2026-06-17T17:46:30.825Z
+excerpt: Cada espetáculo começa muito antes da estreia. Antes das luzes se
+  acenderem, dos aplausos ecoarem pelo teatro e das emoções alcançarem o
+  público, existe um processo intenso de criação, descoberta e dedicação.
 ---
 Cada espetáculo começa muito antes da estreia. Antes das luzes se acenderem, dos aplausos ecoarem pelo teatro e das emoções alcançarem o público, existe um processo intenso de criação, descoberta e dedicação.
 
