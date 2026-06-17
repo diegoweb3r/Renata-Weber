@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 :root {
+  --blog-card-bg: #2a2a2a;
+  --blog-card-border: #3a3a3a;
+  --blog-muted: #888;
   --cor-fundo: #1e1e1e;
   --cor-texto: #f0f0f0;
   --cor-destaque: rgb(143, 36, 36);
