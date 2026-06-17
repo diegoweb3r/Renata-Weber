@@ -1,6 +1,8 @@
 ---
 title: Quando um Personagem Começa a Fazer Parte de Nós
 date: 2026-06-17T17:47:36.375Z
+excerpt: "Toda nova montagem traz consigo uma pergunta que acompanha os artistas
+  desde o primeiro ensaio: quem é essa pessoa que vamos contar ao mundo?"
 thumbnail: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70dURO5CS-ixGv_IPSO7zgrjN4nMnQmZ2zw&s
 ---
 <!--StartFragment-->
