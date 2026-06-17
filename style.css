@@ -72,7 +72,7 @@ nav ul {
 
 /* Hero section */
 
-main {
+#mainSection {
   background: linear-gradient(
       to bottom,
       rgba(30, 30, 30, 0) 70%,

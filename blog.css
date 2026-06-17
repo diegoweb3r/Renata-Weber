@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-    /* ── Grid de posts ── */
+
+
+/* ── Grid de posts ── */
     .blog-grid {
       max-width: 1100px;
       margin: 0 auto;
@@ -10,7 +12,7 @@
     }
 
     .post-card {
-      display: flex;
+      display: flex;  
       flex-direction: column;
       gap: .8rem;
       cursor: pointer;
@@ -45,7 +47,7 @@
     }
 
     .post-card h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: "Inter", serif;
       font-size: 1.35rem;
       font-weight: 400;
       line-height: 1.35;
