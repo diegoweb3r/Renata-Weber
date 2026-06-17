@@ -120,6 +120,9 @@
 
     #post-content img{
       border-radius: 1rem;
+      padding: 0.5rem;
+      border-bottom: 1px solid var(--cor-texto);
+      border-top: 1px solid var(--cor-texto);
     }
 
     #post-content p{
