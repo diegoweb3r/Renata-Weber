@@ -58,7 +58,7 @@
 
     .post-card p.excerpt {
       font-size: .9rem;
-      color: #555;
+      color: var(--blog-muted);
       line-height: 1.6;
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -70,12 +70,13 @@
       font-size: .8rem;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--ink);
+      color: var(--cor-destaque);
       text-decoration: none;
       border-bottom: 1px solid var(--ink);
       padding-bottom: 2px;
       align-self: flex-start;
       transition: color .2s, border-color .2s;
+  
     }
 
     .post-card .read-more:hover {
@@ -88,35 +89,39 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: var(--cor-destaque);
+    
       z-index: 1000;
       overflow-y: auto;
       padding: 2rem 1rem;
       
     }
+
     .post-overlay.open { display: block; }
 
     .post-modal {
-      background: var(--cream);
       max-width: 720px;
       margin: 0 auto;
       padding: 3.5rem 4rem;
       position: relative;
+      background: var(--cor-destaque);
+      border-radius: 1rem;
+      
     }
 
     #post-content{
       text-align: justify;
-      color: var(--cor-texto);
+      
     }
 
-    section.text h1 {
-  color: var(--cor-texto);
-}
+    #post-content h1{
+      font-family: 'Inter', serif;
+      text-transform: uppercase;
+    }
+
+    .post-body{
+      color: var(--cor-texto);
+    }
  
-section.text p {
-  color: var(--cor-texto);
-  opacity: 0.7;
-}
 
     @media (max-width: 600px) {
       .post-modal { padding: 2rem 1.5rem; }
