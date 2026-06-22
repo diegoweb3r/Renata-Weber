@@ -50,8 +50,8 @@ nav {
   padding: 15px 15px 0 0;
   top: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.3); /* Um preto bem transparente */
-  backdrop-filter: blur(8px);    /* O efeito de vidro */
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
   padding: 20px;
   border-radius: 10px;
 }
@@ -135,13 +135,18 @@ main::after{
 }
 
 .text p {
-  min-width: 40%;
-  max-width: 40%;
+  
   color: var(--cor-texto);
   font-weight: 200;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+
+
 }
 
 .separador {
