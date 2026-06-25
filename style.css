@@ -16,6 +16,15 @@
   box-sizing: border-box;
 }
 
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  outline: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,15 +54,34 @@ body {
 nav {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: sticky;
-  padding: 15px 15px 0 0;
+  padding: 1.6rem 3rem;
   top: 0;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
-  padding: 20px;
   border-radius: 10px;
+}
+
+.logo-container{
+  padding-left: 1rem;
+  display: flex;
+}
+
+.logo-container p{
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo{
+  color: var(--cor-destaque);
+  font-size: 2rem;
+  padding-right: 0.5rem;
+  border-right: 1px solid var(--cor-destaque);
 }
 
 a:hover {
@@ -61,20 +89,23 @@ a:hover {
 }
 
 nav ul {
-  width: 30%;
   display: flex;
   justify-content: space-between;
   font-weight: 100;
   transition: all 0.4s ease-in-out;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .toggleMenu{
   cursor: pointer;
   display: none;
+  filter: invert(1)
 }
 
-/* Hero section */
 
+
+/* Hero section */
 #mainSection {
   background: linear-gradient(
       to bottom,
@@ -93,11 +124,10 @@ nav ul {
   padding: 40px 20px;
 }
 
-
 main::after{
   content: '';
   position: absolute;
-   background: linear-gradient(
+  background: linear-gradient(
     90deg,
     transparent,
     rgba(255, 255, 255, 0.4),
@@ -112,8 +142,6 @@ main::after{
   transform: rotate(15deg);
   border-radius: 100px;
 }
-
-
 
 .text h1,
 .text p {
@@ -135,18 +163,15 @@ main::after{
 }
 
 .text p {
-  
   color: var(--cor-texto);
   font-weight: 200;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-    background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
   padding: 0 1rem;
   border-radius: 0.5rem;
-
-
 }
 
 .separador {
@@ -224,6 +249,7 @@ main::after{
   color: var(--cor-secundaria);
   font-size: 0.9rem;
 }
+
 .cardInfo .name {
   font-family: "Playfair Display", serif;
   color: var(--cor-destaque);
@@ -232,8 +258,6 @@ main::after{
 }
 
 /* Galeria */
-
-
 .gallery img {
   margin-top: 2rem;
   width: 350px;
@@ -241,7 +265,6 @@ main::after{
   object-fit: cover;
   filter: grayscale(100%);
   transition: filter 0.8s ease;
-
 }
 
 .gallery img:hover {
@@ -274,11 +297,9 @@ main::after{
   height: 60px;
   border: 2px solid var(--cor-destaque);
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   transition: .3s;
 }
 
@@ -315,24 +336,26 @@ footer {
 
 
 /* Media Queries */
+@media (max-width: 769px){
 
-@media (max-width: 768px){
+  #nav:has(.active) {
+    min-height: 90vh;
+    top: 10px;
+    align-items: flex-start;
+    position: sticky;
+  }
 
-  
   nav ul{
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 90px;
     padding: 1rem;
     gap: 1rem;
     text-align: right;
     min-width: 90%;
-    background-color: var(--cor-fundo);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s ease-in-out;
-
+    transition: all 0.4s ease-in-out;
   }
 
   nav ul.active{
@@ -341,6 +364,8 @@ footer {
     visibility: visible;
   }
 
+
+
   .toggleMenu{
     display: block;
   }
@@ -348,12 +373,11 @@ footer {
   .sobre p{
     width: 100%;
   }
+
   .images{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
-
 }
