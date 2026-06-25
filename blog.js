@@ -79,16 +79,15 @@
           <span class="meta">${formatDate(post.date)}</span>
           <h2>${post.title}</h2>
           ${post.excerpt ? `<p class="excerpt">${post.excerpt}</p>` : ''}
-          <a class="read-more" href="#" data-index="${i}">Ler texto</a>
+          <a class="read-more" href="#">Ler texto</a>
         </article>
       `).join('');
 
       // Eventos de clique
-      grid.querySelectorAll('[data-index]').forEach(el => {
+      grid.querySelectorAll('article.post-card').forEach(el => {
         el.addEventListener('click', e => {
           e.preventDefault();
-          const idx = parseInt(el.closest('[data-index]')?.dataset.index ?? el.dataset.index);
-          openPost(posts[idx]);
+          openPost(posts[parseInt(el.dataset.index)]);
         });
       });
     }
